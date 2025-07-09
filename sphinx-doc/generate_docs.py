@@ -10,9 +10,9 @@ from sphinx.ext import apidoc
 from sphinx.cmd import build
 
 
-apidoc.main(["-e", "-o", "mfd_tool", os.path.join("..", "mfd_tool")])
+apidoc.main(["-e", "-o", "mfd_base_tool", os.path.join("..", "mfd_base_tool")])
 
 build.main(["-b", "html", ".", "build/html"])
 
 logging.info("Cleaning folders from build process...")
-shutil.rmtree("mfd_tool")
+shutil.rmtree("mfd_base_tool")

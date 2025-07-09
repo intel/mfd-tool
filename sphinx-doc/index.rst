@@ -1,4 +1,4 @@
-Welcome to MFD-Tool's documentation!
+Welcome to MFD-Base-Tool's documentation!
 ======================================
 
 .. toctree::
@@ -11,7 +11,7 @@ Welcome to MFD-Tool's documentation!
    :caption: Main Documentation
    :maxdepth: 4
 
-   MFD-Tool Documentation <mfd_tool/modules>
+   MFD-Base-Tool Documentation <mfd_base_tool/modules>
 
 
 .. toctree::

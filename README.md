@@ -1,7 +1,7 @@
 > [!IMPORTANT]  
 > This project is under development. All source code and features on the main branch are for the purpose of testing or evaluation and not production ready.
 
-# MFD Tool
+# MFD Base Tool
 Module for abstraction of tool (wrappers).
 
 ToolTemplate has got 3 main methods:
@@ -18,7 +18,7 @@ Arguments in public methods must be forced as named arguments:
 Example implementation using ToolTemplate:
 
 ```python
-from mfd_tool import ToolTemplate
+from mfd_base_tool import ToolTemplate
 
 
 class MyTool(ToolTemplate):
@@ -48,4 +48,4 @@ class MyTool(ToolTemplate):
 
 ## Issue reporting
 
-If you encounter any bugs or have suggestions for improvements, you're welcome to contribute directly or open an issue [here](https://github.com/intel/mfd-tool/issues).
+If you encounter any bugs or have suggestions for improvements, you're welcome to contribute directly or open an issue [here](https://github.com/intel/mfd-base-tool/issues).

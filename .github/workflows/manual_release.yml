@@ -30,4 +30,4 @@ jobs:
       UPLOAD_PACKAGE: ${{ matrix.upload_package }}
       GIT_USER: 'mfd-intel-bot'
       GIT_EMAIL: 'mfd_intel_bot@intel.com'
-      PROJECT_NAME: 'mfd-tool'
+      PROJECT_NAME: 'mfd-base-tool'

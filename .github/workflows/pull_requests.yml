@@ -26,4 +26,4 @@ jobs:
       RELEASE_BUILD: false
       GIT_USER: 'mfd-intel-bot'
       GIT_EMAIL: 'mfd_intel_bot@intel.com'
-      PROJECT_NAME: 'mfd-tool'
+      PROJECT_NAME: 'mfd-base-tool'

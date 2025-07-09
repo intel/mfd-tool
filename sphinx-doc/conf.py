@@ -1,7 +1,7 @@
 # Copyright (C) 2025 Intel Corporation
 # SPDX-License-Identifier: MIT
 
-# MFD-Tool documentation build configuration file, created by
+# MFD-Base-Tool documentation build configuration file, created by
 # sphinx-quickstart on Fri Nov 24 14:52:29 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -54,7 +54,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "MFD-Tool"
+project = "MFD-Base-Tool"
 project_copyright = """Copyright (C) 2025 Intel Corporation
 SPDX-License-Identifier: MIT"""
 copyright = project_copyright  # noqa
@@ -115,7 +115,7 @@ html_static_path = ["_static"]
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "mfd-tool-doc"
+htmlhelp_basename = "mfd-base-tool-doc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -138,14 +138,14 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "mfd-tool.tex", "MFD-Tool Documentation", "author", "manual"),
+    (master_doc, "mfd-base-tool.tex", "MFD-Base-Tool Documentation", "author", "manual"),
 ]
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "mfd-tool", "MFD-Tool Documentation", [author], 1)]
+man_pages = [(master_doc, "mfd-base-tool", "MFD-Base-Tool Documentation", [author], 1)]
 
 # -- Options for Texinfo output -------------------------------------------
 
@@ -155,10 +155,10 @@ man_pages = [(master_doc, "mfd-tool", "MFD-Tool Documentation", [author], 1)]
 texinfo_documents = [
     (
         master_doc,
-        "MFD-Tool",
-        "MFD-Tool Documentation",
+        "MFD-Base-Tool",
+        "MFD-Base-Tool Documentation",
         author,
-        "MFD-Tool",
+        "MFD-Base-Tool",
         "One line description of project.",
         "Miscellaneous",
     ),

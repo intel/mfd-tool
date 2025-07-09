@@ -1,6 +1,6 @@
 # Copyright (C) 2025 Intel Corporation
 # SPDX-License-Identifier: MIT
-from mfd_tool import ToolTemplate
+from mfd_base_tool import ToolTemplate
 
 
 class MyTool(ToolTemplate):
