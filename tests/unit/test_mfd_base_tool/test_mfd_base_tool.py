@@ -1,10 +1,10 @@
 # Copyright (C) 2025 Intel Corporation
 # SPDX-License-Identifier: MIT
-"""Tests for `mfd_tool` package."""
+"""Tests for `mfd_base_tool` package."""
 
 import pytest
 
-from mfd_tool import ToolTemplate
+from mfd_base_tool import ToolTemplate
 from mfd_connect import Connection
 from mfd_typing import OSType
 
@@ -29,7 +29,7 @@ class TestTool:
 
     @pytest.fixture()
     def tool(self, tool_initializable_class, conn, mocker):
-        mocker.patch("mfd_tool.ToolTemplate.__init__", mocker.Mock(return_value=None))
+        mocker.patch("mfd_base_tool.ToolTemplate.__init__", mocker.Mock(return_value=None))
         tool = tool_initializable_class(connection=conn)
         tool._tool_exec = mocker.sentinel.tool_exec
         return tool

@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = MFD-Tool
+SPHINXPROJ    = MFD-Base-Tool
 SOURCEDIR     = .
 BUILDDIR      = _build
 

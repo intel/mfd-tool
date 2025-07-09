@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 dependencies = { file = ["requirements.txt"] }
 
 [project]
-name = "mfd-tool"
+name = "mfd-base-tool"
 description = "Module that contains abstraction of tool in Modular Framework Design (MFD)."
 requires-python = ">=3.10, <3.14"
 version = "2.7.0"

@@ -2,4 +2,4 @@
 # SPDX-License-Identifier: MIT
 """Module for tool template."""
 
-from .mfd_tool import ToolTemplate
+from .mfd_base_tool import ToolTemplate
