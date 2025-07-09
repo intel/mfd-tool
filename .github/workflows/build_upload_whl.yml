@@ -97,7 +97,7 @@ jobs:
           python -m venv bump_version
           source bump_version/bin/activate
           pip install python-semantic-release~=10.2
-          pip install mfd-code-quality==1.2.0
+          pip install -r ${{ inputs.SOURCE_PATH }}/requirements-dev.txt
           mfd-create-config-files --project-dir ./${{ inputs.SOURCE_PATH }}
           cd ${{ inputs.SOURCE_PATH }}
           version_after_bump=$(semantic-release version --print | tail -n 1 | tr -d '\n')
@@ -133,8 +133,20 @@ jobs:
 
           UNIT_TEST_DIR="${{ inputs.SOURCE_PATH }}/tests/unit/test_$(echo "${REPO_NAME}" | tr '-' '_')"
           FUNC_TEST_DIR="${{ inputs.SOURCE_PATH }}/tests/system/test_$(echo "${REPO_NAME}" | tr '-' '_')"
-          echo "run_unit_tests=false" >> $GITHUB_OUTPUT
-          echo "run_functional_tests=false" >> $GITHUB_OUTPUT
+          if [ -d "$UNIT_TEST_DIR" ]; then
+            echo "Unit tests directory exists: $UNIT_TEST_DIR"
+            echo "run_unit_tests=true" >> $GITHUB_OUTPUT
+          else
+            echo "Unit tests directory does not exist: $UNIT_TEST_DIR"
+            echo "run_unit_tests=false" >> $GITHUB_OUTPUT
+          fi
+          if [ -d "$FUNC_TEST_DIR" ]; then
+            echo "Functional tests directory exists: $FUNC_TEST_DIR"
+            echo "run_functional_tests=true" >> $GITHUB_OUTPUT
+          else
+            echo "Functional tests directory does not exist: $FUNC_TEST_DIR"
+            echo "run_functional_tests=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Install dependencies for tests
         if: steps.test_check.outputs.run_unit_tests == 'true' || steps.test_check.outputs.run_functional_tests == 'true'
